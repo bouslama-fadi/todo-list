@@ -34,7 +34,7 @@ const AuthCard = () => {
   };
 
   const onSubmitData = () => {
-    if (username == "test@test.com" && password == "test") {
+    if (username == "test" && password == "test") {
       console.log("Success");
       history.push("/dashboard");
     } else {
