@@ -1,7 +1,13 @@
 import React, { Component, useState } from "react";
 import { Form, Input, Button, ListGroup, ListGroupItem } from "reactstrap";
 
-const AddForm = ({ inputText, setInputText, todos, setTodos }) => {
+const AddForm = ({
+  inputText,
+  setInputText,
+  todos,
+  setTodos,
+  saveLocalTodos,
+}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
