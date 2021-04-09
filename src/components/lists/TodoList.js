@@ -9,6 +9,7 @@ const TodoList = ({ todos, setTodos }) => {
       {todos.map((todo) => (
         <Todo
           text={todo.text}
+          description={todo.description}
           key={todo.id}
           setTodos={setTodos}
           todos={todos}

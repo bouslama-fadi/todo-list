@@ -6,20 +6,31 @@ const AddForm = ({
   setInputText,
   todos,
   setTodos,
-  saveLocalTodos,
+  inputTextDesc,
+  setInputTextDesc,
 }) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
+  };
+
+  const inputTextDescHandler = (e) => {
+    setInputTextDesc(e.target.value);
   };
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
       ...todos,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
+      {
+        text: inputText,
+        description: inputTextDesc,
+        completed: false,
+        id: Math.random() * 1000,
+      },
     ]);
     // Reset the state
     setInputText("");
+    setInputTextDesc("");
   };
 
   return (
@@ -28,12 +39,30 @@ const AddForm = ({
         <ListGroup>
           <ListGroupItem>
             <h4>Create new task</h4>
-            <Input
-              className="form-control-alternative"
-              type="text"
-              onChange={inputTextHandler}
-              value={inputText}
-            />
+            <div className="customInput">
+              <label className="form-control-label" htmlFor="name">
+                Name
+              </label>
+              <Input
+                className="form-control-alternative"
+                type="text"
+                onChange={inputTextHandler}
+                value={inputText}
+                name="name"
+              />
+            </div>
+            <div className="customInput">
+              <label className="form-control-label" htmlFor="description">
+                Description
+              </label>
+              <Input
+                className="form-control-alternative"
+                type="text"
+                onChange={inputTextDescHandler}
+                value={inputTextDesc}
+                name="description"
+              />
+            </div>
             <Button
               className="mt-2"
               color="primary"

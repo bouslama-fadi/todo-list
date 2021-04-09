@@ -9,6 +9,7 @@ const Dashboard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [inputText, setInputText] = useState("");
+  const [inputTextDesc, setInputTextDesc] = useState("");
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
@@ -52,6 +53,8 @@ const Dashboard = (props) => {
         <AddForm
           inputText={inputText}
           setInputText={setInputText}
+          inputTextDesc={inputTextDesc}
+          setInputTextDesc={setInputTextDesc}
           todos={todos}
           setTodos={setTodos}
           saveLocalTodos={saveLocalTodos}

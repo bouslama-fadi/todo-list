@@ -13,3 +13,10 @@
   position: relative;
   float: right;
 }
+
+.customInput {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 5px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, ListGroup, ListGroupItem, Badge } from "reactstrap";
 
-const Todo = ({ text, todo, todos, setTodos }) => {
+const Todo = ({ text, description, todo, todos, setTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
@@ -26,7 +26,10 @@ const Todo = ({ text, todo, todos, setTodos }) => {
       {/* <h2>Task's list</h2> */}
       <ListGroup>
         <ListGroupItem>
-          <div className="textContainer">{text}</div>
+          <div className="textContainer">
+            <strong>{text} :</strong> {description}
+          </div>
+
           <div className="buttonContainer">
             <Button color="primary" onClick={completeHandler}>
               Done
@@ -41,7 +44,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
           </div>
           {todo.completed ? (
             <div className="badgeStyle">
-              <Badge color="primary">Completed</Badge>
+              <Badge color="success">Completed</Badge>
             </div>
           ) : (
             <div className="badgeStyle">
