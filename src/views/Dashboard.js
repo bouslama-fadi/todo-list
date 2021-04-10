@@ -42,10 +42,7 @@ const Dashboard = (props) => {
       {/* <div>
         <NavBar isOpen={isOpen} toggle={toggle} />
       </div> */}
-      <div className="container">
-        <header>
-          <h2>Todo List AOS</h2>
-        </header>
+      <div className="container mt-5">
         {/* Tasks List */}
 
         <TodoList todos={todos} setTodos={setTodos} />

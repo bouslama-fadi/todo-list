@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Authentification from "./views/Authentification";
+import DashboardLayout from "./views/DashboardLayout";
 import Dashboard from "./views/Dashboard";
 
 ReactDOM.render(
@@ -19,8 +20,8 @@ ReactDOM.render(
       <Route exact path="/">
         <Authentification />
       </Route>
-      <Route exact path="/dashboard">
-        <Dashboard />
+      <Route exact path="/welcome">
+        <DashboardLayout />
       </Route>
     </Switch>
   </Router>,

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -9,20 +9,33 @@ import {
   NavLink,
   NavbarText,
 } from "reactstrap";
-const NavBar = ({ toggle, isOpen }) => {
+
+const NavBar = ({
+  toggle,
+  isOpen,
+  navClickHome,
+  navClickHandler,
+  navClickHandlerR2,
+}) => {
   return (
     <>
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/dashboard">Todo List - AOS</NavbarBrand>
+          <NavbarBrand onClick={navClickHome} href="/welcome">
+            Todo List - AOS
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/dashboard">Dashboard</NavLink>
+                <NavLink onClick={navClickHandler} href="/welcome">
+                  Dashboard
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="">Tasks</NavLink>
+                <NavLink onClick={navClickHandlerR2} href="">
+                  Tasks
+                </NavLink>
               </NavItem>
             </Nav>
             <NavbarText>
