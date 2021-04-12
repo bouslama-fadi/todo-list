@@ -31,6 +31,20 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
+### install docker 
+
+To install docker for windows open https://docs.docker.com/docker-for-windows/install/ .\
+To install docker for windows open https://docs.docker.com/docker-for-mac/install/ .
+
+### `docker-compose build`
+
+Run the command from your project directory to build or rebuild services.
+
+### `docker-compose up`
+
+Run the command from your project directory to start up your application.
+
+
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
