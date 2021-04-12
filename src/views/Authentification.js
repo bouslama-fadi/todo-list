@@ -19,13 +19,11 @@ import AuthCard from "../components/cards/AuthCard";
 const Authentification = () => {
   return (
     <div>
-      {/* <Button variant="secondary">clickMe</Button> */}
       <div className="container">
         <div className="justify-content-center">
           <AuthCard />
         </div>
       </div>
-      {/* <Button color="primary">clickMe</Button> */}
     </div>
   );
 };

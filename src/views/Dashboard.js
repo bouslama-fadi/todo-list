@@ -7,7 +7,6 @@ import TodoList from "../components/lists/TodoList";
 
 const Dashboard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
   const [inputText, setInputText] = useState("");
   const [inputTextDesc, setInputTextDesc] = useState("");
   const [todos, setTodos] = useState([]);
@@ -39,9 +38,6 @@ const Dashboard = (props) => {
 
   return (
     <>
-      {/* <div>
-        <NavBar isOpen={isOpen} toggle={toggle} />
-      </div> */}
       <div className="container mt-5">
         {/* Tasks List */}
 
