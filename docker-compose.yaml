@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  client:
+    container_name: todoClient
+    build: ./ # Localisation du Dockerfile
+    ports:
+      - 3000:3000 # Nous exposons le port 3000
+    networks:
+      - mern-app
+    stdin_open: true
+networks:
+  mern-app:
+    driver: bridge
